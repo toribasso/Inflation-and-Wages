@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-04-11T23:14:46+00:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Wages and Inflation",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-04-11T23:14:47+00:00"
+    }
+  ],
+  "collections": []
+}
