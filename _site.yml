@@ -1,14 +1,11 @@
-name: "."
-title: "Wages and Inflation"
-description: |
-  Wages and Inflation
+name: "Inflation and Wages"
+title: "Inflation and Wages"
 output_dir: "docs"
-theme: apreshill.css
 navbar:
   right:
-    - text: "Home"
+    - text: "Inflation and Wages"
       href: index.html
-    - text: "About"
+    - text: "History"
       href: about.html
     - text: "Analysis"
       href: analysis.html

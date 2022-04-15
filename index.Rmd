@@ -1,7 +1,8 @@
 ---
-title: "Project on Wages and Inflation"
+title: "Inflation and Wages"
+site: distill::distill_website
 ---
-    
+
 Hello! Welcome to my project. This project was initiated by
 my passion for Personal Finance and my R Programming course
 STA 518.
@@ -10,6 +11,17 @@ As of February 2022, the unadjusted Consumer Price Index for the past 12 months 
 7.9% ([source](https://www.bls.gov/news.release/cpi.nr0.htm)). This seems to be 
 insanely high and I wondered if wages has kept up with this inflation rate. 
 
-![](~/STA 518/Activities/Inflation_and_Wages_Website/Inflation.jpg)CC BY 2.0 ([url](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F30478819%40N08%2F46688178665&psig=AOvVaw0PQqN63bScyG1tVLZfWfQJ&ust=1649196553989000&source=images&cd=vfe&ved=0CAcQjRxqFwoTCPjUiZO2-_YCFQAAAAAdAAAAABAc))
+![](~/STA 518/Activities/Inflation-and-Wages/Inflation.jpg)CC BY 2.0 ([url](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F30478819%40N08%2F46688178665&psig=AOvVaw0PQqN63bScyG1tVLZfWfQJ&ust=1649196553989000&source=images&cd=vfe&ved=0CAcQjRxqFwoTCPjUiZO2-_YCFQAAAAAdAAAAABAc))
 
-Please first stop at the first tab "History of Inflation and Wages" and then proceed to the second tab "Analysis of Inflation and Wages".
+Please first stop at the first tab "History" and then proceed to the second tab "Analysis".
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```

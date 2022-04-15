@@ -1,6 +1,6 @@
 ---
-title: "Analysis of Inflation and Wages"
-output: html_document
+title: "Analysis"
+output: distill::distill_article 
 ---
 
 Now that you have established that Inflation increasing at a higher rate than wages. Lets see how bad of an issue this seems to be.
@@ -71,3 +71,7 @@ high school diploma, their wages actually decrease as inflation increases.
 
 With inflation in the United States at a high in recent history, it seems that those with a college
 diploma will be better off than those without.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
