@@ -3,6 +3,7 @@ title: "Wages and Inflation"
 description: |
   Wages and Inflation
 output_dir: "docs"
+theme: apreshill.css
 navbar:
   right:
     - text: "Home"
