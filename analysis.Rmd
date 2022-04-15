@@ -1,0 +1,73 @@
+---
+title: "Analysis of Inflation and Wages"
+output: html_document
+---
+
+Now that you have established that Inflation increasing at a higher rate than wages. Lets see how bad of an issue this seems to be.
+
+## Importing Data
+
+```{r Import, message=FALSE}
+library(readxl)
+DatasetForRProject <- read_excel("DatasetForRProject.xlsx")
+```
+
+## Descriptive Statistics
+
+```{r DescriptiveStat, message=FALSE}
+summary(DatasetForRProject)
+```
+
+The General Average Wage has much higher measures of spread than median measures of spread.
+This may indicate that there are large outliers influencing the average wage to be higher.
+If we look at wages-by-degree, it seems like having a degree is much more helpful for wages than
+not having a degree.
+
+```{r LineGraphs, message=FALSE}
+library(ggplot2)
+ggplot(data=DatasetForRProject, aes(x=Year, y=GeneralMedianWage, group=1)) +
+  geom_line()+
+  geom_point()
+ggplot(data=DatasetForRProject, aes(x=Year, y=GeneralAverageWage, group=1)) +
+  geom_line()+
+  geom_point()
+```
+
+This seems like average has less point-to-point variation than the median wage category. Overall, it seems like Wages increase over time and sharply over the past 20 years.
+
+## Correlations
+
+```{r InitialCorr, message=FALSE}
+library(Hmisc)
+flattenCorrMatrix <- function(cormat, pmat) {
+  ut <- upper.tri(cormat)
+  data.frame(
+    row = rownames(cormat)[row(cormat)[ut]],
+    column = rownames(cormat)[col(cormat)[ut]],
+    cor  =(cormat)[ut],
+    p = pmat[ut]
+    )
+}
+res2<-rcorr(as.matrix(DatasetForRProject[,1:9]))
+Corr <-flattenCorrMatrix(res2$r, res2$P)
+Corr[ , c("row", "column","cor")]    
+```
+
+There are high correlations between Consumer Price Index and median wage, average wage, Bachelor's 
+Degree, and Advanced Degree. There was not a high correlation with wages for some college, High School,
+and less than High School. This is highly concerning. This means that over time, individuals who
+receive less than a Bachelor's degree are not keeping up with inflation as much as a college degree. 
+Also, the correlation is negative for people who do not have a high school diploma. This
+indicates that as the Consumer Price Index increases over time, people with a high school diploma
+actually have their wages decrease. 
+
+## Conclusions
+
+The results from the correlations were extremely interesting and shed light on our situation in the
+United States. Individuals who have a College Degree seem to have wages that keep up with inflation.
+Those who do not have a degree, but have a high school education, increase over time. But not at the 
+same pace as inflation. The worth of their wages are slowly eroding over time. For those without a 
+high school diploma, their wages actually decrease as inflation increases.
+
+With inflation in the United States at a high in recent history, it seems that those with a college
+diploma will be better off than those without.
